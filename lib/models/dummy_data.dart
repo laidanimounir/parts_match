@@ -1,6 +1,6 @@
-// تعريف فئة الأقسام (الشاشات / Glass)
+
 class Category {
-  final String id;            // '1' للشاشات، '2' للـ Glass
+  final String id;            
   final String nameAr;
   final String description;
   final String imageAsset;
@@ -17,7 +17,7 @@ class Category {
   });
 }
 
-// قسمان فقط: الشاشات المتوافقة و Glass الحماية
+
 List<Category> appCategories = [
   Category(
     id: '1',
@@ -37,9 +37,9 @@ List<Category> appCategories = [
   ),
 ];
 
-// تعريف الماركات
+
 class Brand {
-  final String id;     // '1'، '2' ...
+  final String id;     
   final String name;
   final String logoIcon;
 
@@ -61,10 +61,10 @@ List<Brand> phoneBrands = [
   Brand(id: '8', name: 'Infinix', logoIcon: 'I'),
 ];
 
-// تعريف موديلات الهواتف
+
 class PhoneModel {
-  final String id;        // '1'، '2' ...
-  final String brandId;   // ترتبط بـ Brand.id
+  final String id;        
+  final String brandId;   
   final String name;
 
   PhoneModel({
@@ -192,7 +192,7 @@ List<Compatibility> compatibilities = [
     notes: 'يجب التأكد من مقاس النسخة.',
   ),
 
-  // شاشات iPhone 13 (id = 9)
+  
   Compatibility(
     id: '9',
     phoneModelId: '9',
@@ -208,7 +208,7 @@ List<Compatibility> compatibilities = [
     notes: 'تحتاج نقل الفلاتات الأصلية.',
   ),
 
-  // Glass لـ iPhone 13
+  
   Compatibility(
     id: '11',
     phoneModelId: '9',
@@ -217,7 +217,7 @@ List<Compatibility> compatibilities = [
     notes: 'جميعها نفس واجهة الشاشة.',
   ),
 
-  // شاشات Redmi Note 12 (id = 13)
+  
   Compatibility(
     id: '12',
     phoneModelId: '13',
@@ -226,7 +226,7 @@ List<Compatibility> compatibilities = [
     notes: 'تعمل لكن الحواف تختلف قليلاً.',
   ),
 
-  // Glass لـ Redmi Note 12
+  
   Compatibility(
     id: '13',
     phoneModelId: '13',
@@ -235,7 +235,6 @@ List<Compatibility> compatibilities = [
     notes: 'متطابقة تماماً في المقاس.',
   ),
 
-  // مثال لموديل بدون توافقات كثيرة (لتجريب حالة "لا توجد بيانات")
-  // iPhone 15 (id = 11) - لا نضيف له شيء الآن.
+  
 ];
 

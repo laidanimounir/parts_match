@@ -16,13 +16,13 @@ class PartsMatchApp extends StatelessWidget {
       title: 'PartsMatch',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // استخدمنا colorScheme بدل primaryColor لأنه أحدث
+       
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF1976D2),
         ),
         useMaterial3: true,
       ),
-      // هنا نستدعي الكلاس كـ Widget
+      
       home: SplashScreen(), 
     );
   }

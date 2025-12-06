@@ -35,7 +35,7 @@ class SplashScreen extends StatelessWidget {
                   border: Border.all(color: Colors.white30, width: 2),
                 ),
                 child: const Icon(
-                  Icons.handyman_outlined, // أيقونة صيانة
+                  Icons.handyman_outlined, 
                   size: 80,
                   color: Colors.white,
                 ),

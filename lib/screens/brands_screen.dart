@@ -3,7 +3,7 @@ import '../models/dummy_data.dart';
 import 'models_screen.dart';
 
 class BrandsScreen extends StatelessWidget {
-  final Category category; // القسم المختار (الشاشات أو Glass)
+  final Category category;
 
   const BrandsScreen({
     Key? key,
@@ -43,15 +43,13 @@ class BrandsScreen extends StatelessWidget {
                 ),
               ),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-
-              // هنا بالضبط onTap التي تسأل عنها
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => ModelsScreen(
-                      category: category, // نمرّر القسم (شاشات / Glass)
-                      brand: brand,       // نمرّر الماركة المختارة
+                      category: category,
+                      brand: brand,
                     ),
                   ),
                 );

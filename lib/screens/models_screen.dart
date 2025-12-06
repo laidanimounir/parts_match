@@ -3,8 +3,8 @@ import '../models/dummy_data.dart';
 import 'compatibility_screen.dart';
 
 class ModelsScreen extends StatefulWidget {
-  final Category category; // الشاشات أو Glass
-  final Brand brand;       // الماركة المختارة
+  final Category category;
+  final Brand brand;
 
   const ModelsScreen({
     Key? key,
@@ -17,19 +17,17 @@ class ModelsScreen extends StatefulWidget {
 }
 
 class _ModelsScreenState extends State<ModelsScreen> {
-  late List<PhoneModel> _allModels;     // كل الموديلات للماركة
-  late List<PhoneModel> _filteredModels; // الموديلات بعد الفلترة
+  late List<PhoneModel> _allModels;
+  late List<PhoneModel> _filteredModels;
   final TextEditingController _searchController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    // جلب الموديلات الخاصة بهذه الماركة
     _allModels = phoneModels
         .where((m) => m.brandId == widget.brand.id)
         .toList();
     _filteredModels = List.from(_allModels);
-
     _searchController.addListener(_onSearchChanged);
   }
 
@@ -61,7 +59,6 @@ class _ModelsScreenState extends State<ModelsScreen> {
       ),
       body: Column(
         children: [
-          // شريط البحث
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: TextField(
@@ -82,8 +79,6 @@ class _ModelsScreenState extends State<ModelsScreen> {
               ),
             ),
           ),
-
-          // القائمة
           Expanded(
             child: _filteredModels.isEmpty
                 ? const Center(
